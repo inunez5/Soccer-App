@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Overview</h2>
+
+<p><strong>Total Goals:</strong> {{ total_goals }}</p>
+<p><strong>Total Assists:</strong> {{ total_assists }}</p>
+
+<h3>Featured Players</h3>
+<ul>
+  {% for p in players %}
+    <li>{{ p.name }} – {{ p.club }} ({{ p.position }})</li>
+  {% endfor %}
+</ul>
+
+{% endblock %}

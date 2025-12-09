@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Compare Two Players</h2>
+
+<form method="post">
+  <label>Player 1:
+    <select name="player1" required>
+      <option value="">-- Select Player --</option>
+      {% for p in players %}
+      <option value="{{ p.name }}">{{ p.name }}</option>
+      {% endfor %}
+    </select>
+  </label>
+
+  <label>Player 2:
+    <select name="player2" required>
+      <option value="">-- Select Player --</option>
+      {% for p in players %}
+      <option value="{{ p.name }}">{{ p.name }}</option>
+      {% endfor %}
+    </select>
+  </label>
+
+  <button type="submit">Compare</button>
+</form>
+
+{% if player1 and player2 %}
+<hr>
+
+<h3>{{ player1.name }} vs {{ player2.name }}</h3>
+
+<ul>
+  <li>{{ player1.name }} Goals: {{ player1.goals }}</li>
+  <li>{{ player2.name }} Goals: {{ player2.goals }}</li>
+
+  <li>{{ player1.name }} Assists: {{ player1.assists }}</li>
+  <li>{{ player2.name }} Assists: {{ player2.assists }}</li>
+</ul>
+{% endif %}
+
+{% endblock %}

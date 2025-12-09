@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>All Players</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Club</th>
+      <th>Position</th>
+      <th>Goals</th>
+      <th>Assists</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    {% for p in players %}
+    <tr>
+      <td>{{ p.name }}</td>
+      <td>{{ p.club }}</td>
+      <td>{{ p.position }}</td>
+      <td>{{ p.goals }}</td>
+      <td>{{ p.assists }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

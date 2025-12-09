@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Lionel Messi",
+    "club": "Inter Miami",
+    "position": "Forward",
+    "goals": 820,
+    "assists": 350
+  },
+  {
+    "name": "Cristiano Ronaldo",
+    "club": "Al Nassr",
+    "position": "Forward",
+    "goals": 860,
+    "assists": 240
+  },
+  {
+    "name": "Kylian Mbappé",
+    "club": "Real Madrid",
+    "position": "Forward",
+    "goals": 280,
+    "assists": 120
+  }
+]

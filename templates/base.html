@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Soccer Stats Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+<body>
+
+<header>
+    <h1>Soccer Stats Dashboard</h1>
+    <nav>
+        <a href="{{ url_for('index') }}">Home</a>
+        <a href="{{ url_for('players') }}">Players</a>
+        <a href="{{ url_for('compare') }}">Compare Players</a>
+    </nav>
+</header>
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<footer>
+    <p>Built for Capstone Project using Flask.</p>
+</footer>
+
+</body>
+</html>
